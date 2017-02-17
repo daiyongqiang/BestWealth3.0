@@ -1,4 +1,4 @@
-package com.ihope.bestwealth;
+package com.ihope.bestwealth.ui;
 
 public interface BaseView<T> {
 

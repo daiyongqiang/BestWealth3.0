@@ -29,3 +29,15 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.1.0'
     testCompile 'junit:junit:4.12'
 }
+
+void printHelloWorld(String str) {
+    if(str) {
+        println 'Hello World.'
+    } else {
+        println 'Error!'
+    }
+}
+
+task helloWorld << {
+    printHelloWorld()
+}

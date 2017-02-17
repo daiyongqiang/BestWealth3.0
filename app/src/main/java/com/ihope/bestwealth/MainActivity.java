@@ -6,6 +6,8 @@ import com.ihope.bestwealth.ui.BaseActivity;
 
 public class MainActivity extends BaseActivity {
 
+    private MainPresenter mMainPresenter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
