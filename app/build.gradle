@@ -30,7 +30,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 
-void printHelloWorld(String str) {
+void myPrint(String str) {
     if(str) {
         println 'Hello World.'
     } else {
@@ -38,6 +38,12 @@ void printHelloWorld(String str) {
     }
 }
 
-task helloWorld << {
-    printHelloWorld()
+task compilePrint << {
+    myPrint()
 }
+
+task compileHelloWorld(dependsOn: compilePrint) << {
+    compilePrint
+}
+
+
