@@ -42,8 +42,14 @@ task compilePrint << {
     myPrint()
 }
 
-task compileHelloWorld(dependsOn: compilePrint) << {
-    compilePrint
+task compileInstall << {
+    println 'Install'
 }
+
+task compileHelloWorld(dependsOn: [compilePrint, compileInstall]) << {
+    println ('Current Gradle version:' + rootProject.gradle.gradleVersion);
+}
+
+
 
 
