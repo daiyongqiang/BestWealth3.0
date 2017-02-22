@@ -47,9 +47,16 @@ task compileInstall << {
 }
 
 task compileHelloWorld(dependsOn: [compilePrint, compileInstall]) << {
-    println ('Current Gradle version: ' + rootProject.gradle.gradleVersion);
+    println('Current Gradle version: ' + rootProject.gradle.gradleVersion)
+    println "Current Gradle version: $rootProject.gradle.gradleVersion";
 }
 
+task compileClean << {
+    println description
+}
 
+compileClean.configure {
+    description 'compileDelete'
+}
 
 
